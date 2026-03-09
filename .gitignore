@@ -3,5 +3,4 @@
 __pycache__/
 *.pyc
 output/
-project_logs/
 .venv/
