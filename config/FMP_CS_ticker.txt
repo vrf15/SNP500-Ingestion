@@ -1,0 +1,4 @@
+KO
+PEP
+WMT
+COST

@@ -5,3 +5,4 @@ __pycache__/
 output/
 .venv/
 smp500_test/
+.smp500_test/
