@@ -84,4 +84,4 @@ TEAM    FAILED
 
 ---
 
-Note: All of [MATERIALS],[REAL_ESTATE], and [UTILITIES] sector failed... I will update the list once I am done setting up all of ingestion.
+Note: All of [MATERIALS], [REAL_ESTATE], and [UTILITIES] sectors failed... I will update the list once I am done setting up all of the ingestion.
