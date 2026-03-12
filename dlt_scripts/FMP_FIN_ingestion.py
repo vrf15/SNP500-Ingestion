@@ -11,6 +11,7 @@ import requests
 import pandas as pd
 import boto3
 from sqlalchemy import create_engine
+import pendulum
 
 # API config
 API_KEY = os.getenv("FMP_API_KEY")
@@ -21,7 +22,7 @@ TICKER_FILE = Path("/opt/airflow/config/smp500_ingestion/FMP_FIN_ticker.txt")
 
 # Ingestion configuration
 SLEEP_SECONDS = 0.5
-RUN_DATE = (datetime.now() - pd.tseries.offsets.BDay(1)).strftime("%Y-%m-%d")
+RUN_DATE = pendulum.now("America/New_York").strftime("%Y-%m-%d")
 
 # RDS env vars
 DB_HOST = os.getenv("DESTINATION__POSTGRES__CREDENTIALS__HOST")

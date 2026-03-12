@@ -5,6 +5,7 @@ import os
 import time
 from pathlib import Path
 from datetime import datetime, timezone
+import pendulum
 
 # Non-native libraries
 import requests
@@ -21,7 +22,7 @@ TICKER_FILE = Path("/opt/airflow/config/smp500_ingestion/FMP_CS_ticker.txt")
 
 # Ingestion configuration
 SLEEP_SECONDS = 0.5
-RUN_DATE = (datetime.now() - pd.tseries.offsets.BDay(1)).strftime("%Y-%m-%d")
+RUN_DATE = pendulum.now("America/New_York").strftime("%Y-%m-%d")
 
 # RDS env vars
 DB_HOST = os.getenv("DESTINATION__POSTGRES__CREDENTIALS__HOST")
